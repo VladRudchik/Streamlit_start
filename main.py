@@ -1,11 +1,11 @@
 import streamlit as st
-import gpt4all
+from gpt4all import GPT4All
 
 
 st.title("Chatbot")
 
 with st.spinner("Loading model..."):
-    gptj = gpt4all.GPT4All("orca-mini-3b.ggmlv3.q4_0")
+    gptj = GPT4All("orca-mini-3b.ggmlv3.q4_0")
 
 with st.chat_message("EasyChatGPT"):
     st.write("Hello, I`m local GPT model, how can I help you?")
